@@ -1,0 +1,13 @@
+{
+	"personId": 1002,
+	"firstName": "Jerry",
+	"lastName": "Mouse",
+	"addresses": [
+		{
+			"personId": 1002,
+			"emailAddress": "jerry.mouse@example.com",
+			"city": "Helsinki",
+			"country": "Finland"
+		}
+	]
+}

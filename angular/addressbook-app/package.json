@@ -1,0 +1,17 @@
+{
+	"name": "addressbook-app",
+	"version": "0.0.1",
+	"description": "Generated with Eclipse npm Tools",
+	"devDependencies": {
+		"lite-server": "^2.2.0",
+		"bower": "^1.7.7"
+	},
+	"scripts": {
+		"postinstall": "bower install",
+		"prestart": "npm install",
+		"start": "npm run lite",
+		"lite": "lite-server"
+	},
+	"author": "Kamesh Sampath <kamesh.sampath@hotmail.com>",
+	"license": "ASLv2"
+}

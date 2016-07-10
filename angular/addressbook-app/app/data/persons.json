@@ -1,0 +1,60 @@
+[
+	{
+		"personId": 1001,
+		"firstName": "Tom",
+		"lastName": "Cat",
+		"addresses": [
+			{
+				"personId": 1001,
+				"emailAddress": "tom.cat@example.com",
+				"city": "London",
+				"country": "England"
+			}
+		]
+	},
+	{
+		"personId": 1002,
+		"firstName": "Jerry",
+		"lastName": "Mouse",
+		"addresses": [
+			{
+				"personId": 1002,
+				"emailAddress": "jerry.mouse@example.com",
+				"city": "Helsinki",
+				"country": "Finland"
+			}
+		]
+	},
+	{
+		"personId": 1003,
+		"firstName": "Mickey",
+		"lastName": "Mouse",
+		"addresses": [
+			{
+				"personId": 1003,
+				"emailAddress": "mickey.mouse@example.com",
+				"city": "Bay Lake",
+				"country": "US"
+			}
+		]
+	},
+	{
+		"personId": 1004,
+		"firstName": "Donald",
+		"lastName": "Duck",
+		"addresses": [
+			{
+				"personId": 1004,
+				"emailAddress": "donald.duck@example.com",
+				"city": "Bay Lake",
+				"country": "US"
+			},
+			{
+				"personId": 1004,
+				"emailAddress": "donald.duck@example.org",
+				"city": "Florida",
+				"country": "US"
+			}
+		]
+	}
+]

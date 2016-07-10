@@ -1,0 +1,19 @@
+{
+	"name": "addressbook-app",
+	"version": "0.0.1",
+	"license": "Aapache Software License v2.0",
+	"private": true,
+	"dependencies": {
+		"angular": "1.5.x",
+		"bootstrap": "3.3.x",
+		"angular-route": "1.5.x",
+		"angular-resource": "1.5.x"
+	},
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	]
+}

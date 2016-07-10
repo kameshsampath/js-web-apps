@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="addressBookApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>enRoute - AddressBook Application</title>
+  
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+  
+  <link rel="stylesheet" href="app.css"/>
+  
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  
+  <!-- Application declaration -->
+  
+  <script src="app.module.js"></script>
+  <script src="app.config.js"></script>
+  
+  <script src="core/core.module.js"></script>
+  <script src="core/person/person.module.js"></script>
+  <script src="core/person/person.service.js"></script>
+  
+  
+  <!-- Application components  -->
+  <script src="person-list/person-list.module.js"></script>
+  <script src="person-list/person-list.component.js"></script>
+  <script src="person-details/person-details.module.js"></script>
+  <script src="person-details/person-details.component.js"></script>
+</head>
+<body>
+	<div class="container" ng-view></div>
+</body>
+</html>

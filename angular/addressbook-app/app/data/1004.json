@@ -1,0 +1,19 @@
+{
+	"personId": 1004,
+	"firstName": "Donald",
+	"lastName": "Duck",
+	"addresses": [
+		{
+			"personId": 1004,
+			"emailAddress": "donald.duck@example.com",
+			"city": "Bay Lake",
+			"country": "US"
+		},
+		{
+			"personId": 1004,
+			"emailAddress": "donald.duck@example.org",
+			"city": "Florida",
+			"country": "US"
+		}
+	]
+}

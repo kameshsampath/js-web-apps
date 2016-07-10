@@ -1,0 +1,32 @@
+<h1>My Address Book</h1>
+<div class="container-fluid">
+	<div class="row">
+		
+		<div class="col-md-2">
+			<p>
+		  Search: <input ng-model="$ctrl.query"/>
+		  </p>
+		  <p>
+		  Sort by:
+		  <select ng-model="$ctrl.orderProp">
+		  	<option value="firstName">Alphabetical</option>
+		  	<option value="city">City</option>
+		  	<option value="country">Country</option>
+		  </select>
+		  </p>
+		</div>
+		<div class="col-md-10">		
+		<ul class="persons">
+			<li ng-repeat="person in $ctrl.persons | filter:$ctrl.query | orderBy:$ctrl.orderProp" class="thumbnail">
+				<a href="#!/persons/{{person.personId}}" class="thumb">
+					<img ng-src="img/ic_contact_mail.png" alt="{{person.firstName}} {{person.lastName}}"/>
+				</a>
+				<a href="#!/persons/{{person.personId}}">{{person.firstName}} {{person.lastName}}</a>
+			</li>
+		</ul>
+		</div>
+	</div>
+</div>
+
+<!-- DEBUG Purpose -->
+<pre style="display:none">{{$ctrl.persons | filter:$ctrl.query | orderBy:$ctrl.orderProp | json}}</pre>
