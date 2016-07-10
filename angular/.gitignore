@@ -2,3 +2,5 @@
 **/.classpath
 **/.settings/*
 **/*.log
+**/.tern-project
+**/.externalToolBuilders
