@@ -1,0 +1,38 @@
+#
+# 
+#
+name = /org/workspace7/enroute/angular/webresource
+vrs 	= ${version;===;${Bundle-Version}}
+base.version = 1.5.5
+path 	= /static${name}/${base.version}
+
+Bundle-Version: 	1.0.0.${tstamp}
+Bundle-Description: \
+	A bundle that exports a web resource, for example bootstrap or angular. \
+	\
+	${warning;Please update this Bundle-Description in org.workspace7.enroute.angular.webresource/bnd.bnd}
+
+Bundle-License: 	http://opensource.org/licenses/Apache-2.0; link=/LICENSE.txt; description="Apache Software License"
+Bundle-DocURL: 		${warning;Where is the documentation for this web resource}
+Bundle-Vendor: 		${warning;The vendor/group responsible for this webresource}
+
+Provide-Capability:	\
+	osgi.enroute.webresource; \
+		osgi.enroute.webresource=${name}; \
+		version:Version=${base.version}; \
+		root=${path}
+-buildpath: \
+	osgi.enroute.base.api
+
+-includeresource: \
+	{readme.md}, \
+	{${path}=${base.version}}, \
+	{LICENSE.txt}
+
+Export-Package: org.workspace7.enroute.angular.webresource.capabilities
+
+-runrequires:  \
+	osgi.identity;filter:='(osgi.identity=org.workspace7.enroute.angular.webresource)'
+	
+-runbundles:  \
+	org.workspace7.enroute.angular.webresource;version=latest

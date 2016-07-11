@@ -1,0 +1,21 @@
+<h1>Details of {{$ctrl.person.firstName}} {{$ctrl.person.lastName}}</h1>
+
+<input type="hidden" value="{{$ctrl.person.personId}}" />
+
+<div class="row">
+	<div class="col-md-10">
+		<table class="person-address" style="width: 100%">
+			<caption>Addresses</caption>
+			<tr>
+				<th>Email</th>
+				<th>City</th>
+				<th>Country</th>
+			</tr>
+			<tr ng-repeat="address in $ctrl.person.addresses">
+				<td>{{address.emailAddress}}</td>
+				<td>{{address.city}}</td>
+				<td>{{address.country}}</td>
+			</tr>
+		</table>
+	</div>
+</div>

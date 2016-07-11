@@ -1,0 +1,32 @@
+#
+# 
+#
+
+vrs 	= ${version;===;${Bundle-Version}}
+path 	= /static/org/workspace7/enroute/addressbook/person/list/webresource/${vrs}
+
+Bundle-Version: 	1.0.0.${tstamp}
+Bundle-Description: A bundle that exports a web resource, that will be used to handle the Person \
+	List Angular module of the Address Book application
+
+Bundle-License: 	http://opensource.org/licenses/Apache-2.0; link=/LICENSE.txt; description="Apache Software License"
+Bundle-DocURL: 		${warning;Where is the documentation for this web resource}
+Bundle-Vendor: Kamesh Sampath
+
+Provide-Capability:	\
+	osgi.enroute.webresource; \
+		osgi.enroute.webresource=/org/workspace7/enroute/addressbook/person/list/webresource; \
+		version:Version=${vrs}; \
+		root=${path}
+-buildpath: \
+	osgi.enroute.base.api
+
+-includeresource: \
+	{readme.md}, \
+	{${path}=${vrs}}, \
+	{LICENSE.txt}
+
+Export-Package: org.workspace7.enroute.addressbook.person.list.webresource.capabilities
+Bundle-Name: Angular Person List Web Resource
+Bundle-Copyright: Kamesh Sampath
+Bundle-ContactAddress: kamesh.sampath@hotmail.com
