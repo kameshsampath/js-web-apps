@@ -4,10 +4,10 @@
 	"license": "Aapache Software License v2.0",
 	"private": true,
 	"dependencies": {
-		"angular": "1.5.x",
-		"bootstrap": "3.3.x",
-		"angular-route": "1.5.x",
-		"angular-resource": "1.5.x"
+		"angular": "1.4.4",
+		"bootstrap": "3.3.4",
+		"angular-route": "1.4.4",
+		"angular-resource": "1.4.4"
 	},
 	"ignore": [
 		"**/.*",
