@@ -1,0 +1,48 @@
+
+<div class="page-header"><h1>Enter new person details</h1></div>
+
+<form class="form-horizontal" method="POST" role="form">
+	<div class="form-group">
+		<label for="txtFirstName" class="col-md-2 control-label">First Name:</label>
+		<div class="col-md-4">
+		<input type="text" ng-model="$ctrl.person.firstName" class="form-control"
+			id="txtFirstName" name="txtFirstName" placeholder="Donald" required="required">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="txtLastName" class="col-md-2 control-label">Last Name:</label> 
+		<div class="col-md-4">
+		<input type="text" ng-model="$ctrl.person.lastName" class="form-control"
+			id="txtLastName" name="txtLastName" placeholder="Duck" required="required">
+		</div>
+	</div>
+	<div class="page-header"><h4>Addresses</h4></div>
+	<div class="form-group">		
+		 <div class="col-md-12">
+		    <div class="form-group row" data-ng-repeat="address in $ctrl.person.addresses">
+				<div class="col-md-4">
+				<input class="form-control" type="email" ng-model="address.emailAddress" name="" placeholder="abcd@example.com" required="required"/>
+				</div>
+				<div class="col-md-4">
+				<input class="form-control" type="text" ng-model="address.city" name="" placeholder="Bangalore" required="required"/>
+				</div>
+				<div class="col-md-2">
+				<select class="form-control" ng-model="address.country" name="" required="required">
+					<option ng-repeat="country in $ctrl.countries" value="{{country.id}}">{{country.name}}</option>
+				</select>	
+				</div>		
+			    <button class="btn btn-success" ng-show="$last" ng-click="$ctrl.addAddress()">+</button>
+			    <button class="btn btn-danger" ng-show="$last" ng-click="$ctrl.removeAddress()">-</button>
+			</div>
+		</div>
+	</div>
+	
+	<div>
+		<button type="submit" class="btn btn-primary" ng-click="$ctrl.save()">Save</button>
+		<button type="reset" class="btn btn-default">Cancel</button>
+	</div>
+	
+	<br/>
+	<!-- DEBUG  -->
+	<pre>{{$ctrl.person}}</pre>
+</form>

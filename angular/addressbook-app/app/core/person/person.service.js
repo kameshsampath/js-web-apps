@@ -1,12 +1,12 @@
 angular.module('core.person').
 factory('Person',['$resource',
-    function($resource){
-	return $resource('data/:personId.json',{},{
-		query: {
-			method: "GET",
-			params: {personId: 'persons'},
-			isArray: true
-		}
+function($resource){
+	return $resource('http://localhost:8080/rest/person/:personId',{}, {
+		query: { method: "GET", isArray: true },
+		save: { method: "POST"},
+		get: { method: "GET"},
+		remove: { method: "DELETE"},
+		update: { method: "PUT"}
 	});
 }                  
 ]);

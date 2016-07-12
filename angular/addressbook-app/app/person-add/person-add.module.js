@@ -1,0 +1,1 @@
+angular.module("personAdd", ['ngRoute','core.person']);

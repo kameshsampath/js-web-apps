@@ -1,1 +1,1 @@
-angular.module('core.person',['ngResource']);
+angular.module('core.person',['ngResource','ngRoute']);

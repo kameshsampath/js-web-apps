@@ -7,5 +7,6 @@
 angular.module('addressBookApp',[
                                  'ngRoute',
                                  'personList',
-                                 'personDetails'
+                                 'personDetails',
+                                 'personAdd'
                                  ]);
