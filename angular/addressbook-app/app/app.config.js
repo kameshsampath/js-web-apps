@@ -6,12 +6,6 @@ config(['$locationProvider','$routeProvider','$httpProvider',
         function config($locationProvider,$routeProvider,$httpProvider) {
 	$locationProvider.hashPrefix('!');
 	
-	//handling CORS
-	$httpProvider.defaults.headers.common = {};
-	$httpProvider.defaults.headers.post = {};
-	$httpProvider.defaults.headers.put = {};
-	$httpProvider.defaults.headers.patch = {};
-	  
 	$routeProvider.
 	when('/persons', {
 		template: '<person-list></person-list>'

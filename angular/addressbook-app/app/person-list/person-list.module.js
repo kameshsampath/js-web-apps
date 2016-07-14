@@ -1,1 +1,1 @@
-angular.module("personList", ['core.person']);
+angular.module("personList", ['ngRoute','core.person']);

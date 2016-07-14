@@ -5,6 +5,13 @@ angular.module('personAdd').component('personAdd',{
         function PersonController(Person,$scope){
 			var self = this;
 			
+			self.successTextAlert = "Saved Successfully!";
+			self.errorTextAlert = "Error saving Person!";
+			
+			self.showSuccessAlert = false;
+			
+			self.showErrorAlert = false;
+			
 			self.countries = [{"id":"IN","name":"India"},
 			                  {"id":"US","name":"US"},
 			                  {"id":"EN","name":"England"},
@@ -29,9 +36,20 @@ angular.module('personAdd').component('personAdd',{
 			
 			self.save = function(){
 				console.log("Saving Person "+self.person);
-				Person.save(this.person, function(data){
-					console.log("Response:"+data)
-				});
+				Person.save(this.person, 
+					function(success){
+						console.log("Success saving record : "+success);
+						self.showSuccessAlert = true;
+				   },
+				   function(error){
+					   console.log("Error saving record : "+error);
+					   self.showErrorAlert = true;
+				   }
+				);
+			}
+			
+			self.closeAlert = function(value){
+				self[value] = !self[value];
 			}
 		}
 				

@@ -1,6 +1,16 @@
 
 <div class="page-header"><h1>Enter new person details</h1></div>
 
+<div class="alert alert-success" ng-show="$ctrl.showSuccessAlert">
+   <button type="button" class="close" data-ng-click="$ctrl.closeAlert('showSuccessAlert')" >×</button>
+   <strong>{{$ctrl.successTextAlert}}</strong>
+</div>
+
+<div class="alert alert-danger" ng-show="$ctrl.showErrorAlert">
+   <button type="button" class="close" data-ng-click="$ctrl.closeAlert('showErrorAlert')" >×</button>
+   <strong>{{$ctrl.errorTextAlert}}</strong>
+</div>
+ 
 <form class="form-horizontal" method="POST" role="form">
 	<div class="form-group">
 		<label for="txtFirstName" class="col-md-2 control-label">First Name:</label>
@@ -44,5 +54,5 @@
 	
 	<br/>
 	<!-- DEBUG  -->
-	<pre>{{$ctrl.person}}</pre>
+	<!-- pre>{{$ctrl.person}}</pre -->
 </form>
