@@ -12,7 +12,7 @@ component('personList', {
 
 		self.orderProp = 'firstName';
 
-		self.orderReverse = true;
+		self.reverse = true;
 
 		self.showSuccessAlert = false;
 

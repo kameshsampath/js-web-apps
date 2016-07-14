@@ -20,21 +20,24 @@
    <strong>{{$ctrl.errorTextAlert}}</strong>
 </div>
 
+
 <div class="container-fluid">
+
+<pre>Sort by = {{$ctrl.orderProp}}; reverse = {{$ctrl.reverse}}</pre>
 	<div class="row">
 		<div class="col-md-8">
 		<table class="table table-striped table-bordered">
 			<thead>
 				<tr>
 				    <th>Avatar</th>				    
-				    <th><a href="#" ng-click="orderProp ='personId'; orderReverse = !orderReverse">Person Id</a></th>
-					<th><a href="#" ng-click="orderProp = 'firstName'; orderReverse = !orderReverse">First Name</a></th>
-					<th><a href="#" ng-click="orderProp = 'lastName'; orderReverse = !orderReverse">Last Name</a></th>
+				    <th><a href="#!/persons" ng-click="$ctrl.orderProp ='personId'; $ctrl.reverse = !$ctrl.reverse">Person Id</a></th>
+					<th><a href="#!/persons" ng-click="$ctrl.orderProp = 'firstName'; $ctrl.reverse = !$ctrl.reverse">First Name</a></th>
+					<th><a href="#!/persons" ng-click="$ctrl.orderProp = 'lastName'; $ctrl.reverse = !$ctrl.reverse">Last Name</a></th>
 					<th>Actions</th>
 				</tr>
 			</thead>
 				<tr
-					data-ng-repeat="person in $ctrl.persons | filter:$ctrl.query | orderBy:orderProp:orderReverse">
+					data-ng-repeat="person in $ctrl.persons | filter:$ctrl.query | orderBy:$ctrl.orderProp:$ctrl.reverse">
 					<td valign="middle"><img ng-src="img/ic_contact_mail.png" alt="{{person.firstName}} {{person.lastName}}"/></td>
 					<td><a href="#!/persons/{{person.personId}}">{{person.personId}}</a></td>
 					<td>{{person.firstName}}</td>
